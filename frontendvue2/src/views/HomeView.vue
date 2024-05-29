@@ -1,25 +1,17 @@
 <template>
-    <div>
-        hello
-        
-        
-        <Spotify />
+  <div>
+    hello !
 
-
-    </div>
+    <Spotify />
+  </div>
 </template>
 
 <script>
-
-import Spotify from '../components/Spotify.vue';
+import Spotify from "../components/Spotify.vue";
 export default {
   name: "HomeView",
   components: {
-   
-    
     Spotify,
   },
 };
-
-
 </script>
