@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut padding et border dans la dimension des éléments */
+}
+.tutorial {
+    border: 1px solid black;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    background-color: rgb(121, 194, 143);
+    margin: 5% 20%;
+    height: 700px;
+}
+
+.navbar {
+    background-color: #a7a079; /* Jaune */
+    padding: 10px 20px; /* Padding autour des éléments de la navbar */
+    list-style-type: none; /* Retire les puces de la liste */
+    margin: 0; /* Annule les marges par défaut de la liste */
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Répartit les éléments uniformément */
+}
+.navbar ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical des éléments */
+    justify-content: space-between; /* Espacement entre les éléments */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar li {
+    margin-right: 20px; /* Espacement entre les liens */
+}
+
+/* Style pour les liens dans la navbar */
+.navbar a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: black; /* Couleur du texte des liens */
+    font-weight: bold; /* Rend le texte des liens gras */
+    padding: 8px 16px; /* Padding autour des liens */
+    border-radius: 5px; /* Bords arrondis pour les liens */
+}
+
+/* Style pour les liens au survol */
+.navbar a:hover {
+    background-color: #f8f8f8; /* Changement de couleur au survol */
+    color: #333; /* Changement de la couleur du texte au survol */
+}
+
+/* Style pour le lien actif (si nécessaire) */
+.navbar a.active {
+    background-color: #ddd; /* Fond des liens actifs */
+    color: #555; /* Texte des liens actifs */
+}
+
+.recto { 
+position: absolute;
+z-index: 5;
+}
+.vesro {
+    z-index: 1;
+}
+.containercv {
+    background-color: rgb(165, 165, 173);
+    display: flex;
+
+    width: 900px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid noir;
+}
+
+.main-content {
+    background-color: yellow;
+    width: 700px;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: gray;
+}
+
+.windows {
+    display: flex;
+    background-color: #941717;
+    justify-content: center;  /* Centrage horizontal */
+
+    width: 100%;
+    height:100%;
+}
+.allprojects {
+    display: flex;
+    margin: auto;
+
+    width: auto;
+
+    height: 200px;
+    background-color: rgb(59, 105, 105);
+    justify-content: center;  /* Centrage vertical des projets */
+    align-items: center;      /* Centrage horizontal des projets */
+    border: 1px solid black;
+}
+.allprojects > h1 {
+    top: 25%;
+    bottom: 25%;
+    margin-left: 50%;
+    margin-right: 50%;
+    color: red;
+}
+
+.projet {
+    display: flex;
+    flex-direction: column;   /* Alignement vertical des éléments internes */
+    align-items: center;      /* Centrage horizontal des éléments internes */
+    height: 100px;
+    width: 200px;
+    border: 1px solid white;
+}

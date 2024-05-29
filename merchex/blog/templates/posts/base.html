@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% comment %} <link rel="stylesheet" href="{% static 'listings/styles.css' %}" /> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+        <script src="{% static 'blog/js/script.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'vue/css/app.css' %}">
+
+
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="{% static 'vue/js/app.js' %}"></script>
+      
+        {% include "posts/partiels/navbar.html" %}
+
+        {% block content %}{% endblock %}
+
+      
+    </body>
+</html>

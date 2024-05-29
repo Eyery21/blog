@@ -1,0 +1,20 @@
+{% extends "posts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="windows">
+        <div class="allprojects">
+            {% for note in notes %}
+            <div class="projet">
+                <h2>{{ note.title }}</h2>
+                <p>{{ note.content }}</p>
+                <p>{{ note.created_at }}</p>
+                <p>{{ note.category }}</p>
+            </div>
+                {% empty %}
+                <p>No projects available.</p>
+            {% endfor %}
+            
+        </div>
+    </div>
+{% endblock %}

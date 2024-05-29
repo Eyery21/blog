@@ -1,0 +1,20 @@
+{% extends "posts/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="windows">
+        <div class="allprojects">
+            {% for project in projects %}
+            <div class="projet">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.content }}</p>
+                <p>{{ project.created_at }}</p>
+                <p>{{ project.category }}</p>
+            </div>
+                {% empty %}
+                <p>No projects available.</p>
+            {% endfor %}
+            
+        </div>
+    </div>
+{% endblock %}
