@@ -19,15 +19,21 @@ from django.urls import include, path
 from django.urls import path
 from blog import views
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/", include('djoser.urls')),
     path("api/v1/", include('blog.urls')),
     path("blog/", include("blog.urls")),
-    path("", TemplateView.as_view(template_name="index.html")),  # Point d'entrée pour Vue.js
+    # Point d'entrée pour Vue.js
+    path("", TemplateView.as_view(template_name="index.html")),
 
     # path('accounts/', include('allauth.urls')),
 
 
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

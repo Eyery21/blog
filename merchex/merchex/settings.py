@@ -73,7 +73,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',  # Ajouté ici
     'corsheaders.middleware.CorsMiddleware',
-        'allauth.account.middleware.AccountMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 
 
 ]
@@ -86,6 +86,9 @@ CORS_ORIGIN_WHITELIST = [
 ]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # New setting to tell Django where to find static files
 STATICFILES_DIRS = [

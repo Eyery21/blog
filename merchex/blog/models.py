@@ -28,7 +28,6 @@ class Post(models.Model):
     language = models.CharField(choices=Language.choices, max_length=10)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='posts', blank=True, null=True)
-    
 
     def __str__(self):
         return self.title
@@ -51,8 +50,7 @@ class Project(models.Model):
         Category, on_delete=models.CASCADE, related_name='projects', blank=True, null=True)
     date_completed = models.DateField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
-    image = models.ImageField(
-        upload_to='project_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
 
     def __str__(self):
         return self.title

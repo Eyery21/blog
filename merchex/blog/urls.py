@@ -5,6 +5,8 @@ from . import views
 from .views import BlogList
 from .views import BlogNotes
 from .views import BlogProject
+from django.conf.urls.static import static
+
 
 # from .views import BlogList
 # from .views import VueAppView
@@ -23,4 +25,8 @@ urlpatterns = [
     # path('', VueAppView.as_view(), name='app'),
 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
