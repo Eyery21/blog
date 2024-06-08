@@ -34,20 +34,28 @@ class Post(models.Model):
 
 
 class Project(models.Model):
-    class Technology(models.TextChoices):
+    class Langage(models.TextChoices):
         HTML_CSS = 'HTML/CSS', 'HTML/CSS'
         PHP = 'PHP', 'PHP'
         JS = 'JS', 'JavaScript'
         PYTHON = 'PYTHON', 'Python'
-        VUE = 'VUE', 'Vue.js'
-        NODE = 'NODE', 'Node.js'
-        SYMFONY = 'SYMFONY', 'Symfony'
+
+    class FramworkFront(models.TextChoices):
+        VUEJS = 'Vue.js'
+
+    class FramworkBack(models.TextChoices):
+        NODESJS = 'Nodes.js'
+        SYMPHONY = 'Symfony'
+        DJANGO = 'Django'
 
     title = models.CharField(max_length=100)
     description = models.TextField()
-    technologies = models.CharField(max_length=50, choices=Technology.choices)
-    category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name='projects', blank=True, null=True)
+    language = models.CharField(max_length=50, choices=Langage.choices)
+    frameworkfront = models.CharField(
+        max_length=10, choices=FramworkFront.choices, blank=True, null=True)
+    frameworkback = models.CharField(
+        max_length=10, choices=FramworkBack.choices, blank=True, null=True)
+    new = models.BooleanField()
     date_completed = models.DateField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
     image = models.ImageField(upload_to='images/', blank=True, null=True)

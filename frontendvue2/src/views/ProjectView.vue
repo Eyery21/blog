@@ -1,8 +1,9 @@
 <template>
     <v-container class="home">
       <v-carousel
+      class="carousel"
         height="400"
-
+        whith="100%"
         show-arrows="hover"
       >
       <template v-slot:prev="{ on, attrs }">
@@ -23,8 +24,24 @@
             v-on="on"
           >next slide</v-btn>
         </template>
-        <v-carousel-item v-for="(projet, i) in projets" :key="i">
-        <ProjectCard :projet="projet" />
+        <v-carousel-item 
+        v-for="(projet, index) in projets" 
+        :key="projet.id"
+      >
+        <v-row
+        justify="center"
+        
+        >
+          <v-col  cols="2" v-if="getPreviousProject(index)">
+            <ProjectCard :projet="getPreviousProject(index)" />
+          </v-col>
+          <v-col cols="4">
+            <ProjectCard :projet="projet" />
+          </v-col>
+          <v-col  cols="2" v-if="getNextProject(index)">
+            <ProjectCard :projet="getNextProject(index)" />
+          </v-col>
+        </v-row>
       </v-carousel-item>
       </v-carousel>
       
@@ -43,6 +60,8 @@
     data() {
       return {
         projets: [],
+        currentIndex: 0,
+
       };
     },
     mounted() {
@@ -59,6 +78,18 @@
             console.error(error);
           });
       },
+      getPreviousProject(index) {
+      if (index > 0) {
+        return this.projets[index - 1];
+      }
+      return null;
+    },
+    getNextProject(index) {
+      if (index < this.projets.length - 1) {
+        return this.projets[index + 1];
+      }
+      return null;
+    },
     },
   };
   </script>
@@ -71,7 +102,7 @@
     width: 100%;
     height: 100%;
   }
-  
+ 
   .carousel-btn {
     position: absolute;
     top: 50%;
@@ -85,7 +116,12 @@
   .next-btn {
     right: -200px;
   }
-  
+  .littleproject {
+    width: 70px;
+    height: 70px;
+  }
+
+
 
   </style>
   

@@ -12,19 +12,23 @@ class TutoAdmin(admin.ModelAdmin):
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'title',
         'description',
-        'technologies',
-        'category',
+        'language',
+        'frameworkfront',
+        'frameworkback',
+        'new',
         'date_completed',
         'project_link',
         'image',
 
-         )
-         
+    )
+
 
 class NotesAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'title',
         'content',
         'images',
@@ -32,6 +36,21 @@ class NotesAdmin(admin.ModelAdmin):
         'private'
 
     )
-admin.site.register(Post, TutoAdmin)
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'content',
+        'images',
+        'created_at',
+        'like',
+        'dislike',
+        'language',
+        'category'
+    )
+
+
+admin.site.register(Post, PostAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Notes, NotesAdmin)
