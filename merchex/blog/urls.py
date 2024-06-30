@@ -2,11 +2,12 @@
 from django.conf import settings
 from django.urls import path, include
 from . import views
-from .views import BlogList
+from .views import BlogPost
 from .views import BlogNotes
 from .views import BlogProject
 from django.conf.urls.static import static
 
+from django.conf import settings
 
 # from .views import BlogList
 # from .views import VueAppView
@@ -15,7 +16,7 @@ from django.views.generic import TemplateView
 app_name = "blog"
 
 urlpatterns = [
-    path('post/', BlogList.as_view(), name='post_list'),
+    path('post/', BlogPost.as_view(), name='post_list'),
     path('moi', views.Blog_Profil, name='blog_profil'),
     path('projets/', BlogProject.as_view(), name='blog_projects'),
     path('notes/', BlogNotes.as_view(), name='blog_Notes'),
@@ -26,7 +27,7 @@ urlpatterns = [
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    import debug_toolbar
+    urlpatterns = [path('__debug__/', include(debug_toolbar.urls))] + urlpatterns

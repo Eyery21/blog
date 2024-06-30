@@ -1,12 +1,23 @@
 <template>
   <div class="home">
-    <input type="text" v-model="searchQuery" placeholder="Enter search term" />
-    <button @click="searchPost">Search</button>
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
-    <div class="pagination">
-      <button @click="prevPage" :disabled="currentPage === 1">Previous</button>
-      <span>Page {{ currentPage }} of {{ numPages }}</span>
-      <button @click="nextPage" :disabled="currentPage === numPages">Next</button>
+    <div class="tri">
+      <ul>
+        <li>pagination</li>
+        <li>search bar</li>
+        <li>crud</li>
+        <li></li>
+      </ul>
+    </div>
+    <div>
+
+      <input class="input" type="text" v-model="searchQuery" placeholder="Enter search term" />
+      <button class="button-search" @click="searchPost">Search</button>
+      <PostCard v-for="post in posts" :key="post.id" :post="post" />
+      <div class="pagination">
+        <button class="button" @click="prevPage" :disabled="currentPage === 1">page précédente </button>
+        <span> Page {{ currentPage }} of {{ numPages }}</span>
+        <button class="button" @click="nextPage" :disabled="currentPage === numPages">    page suivante    </button>
+      </div>
     </div>
   </div>
 </template>
@@ -66,14 +77,35 @@ export default {
 </script>
 
 <style scoped>
+.input {
+  border: 1px solid black;
+  margin: 5px;
+}
+.button-search {
+  border: 1px solid black;
+  margin: 5px;
+
+}
 .home {
+  background-color: aqua;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.tri {
+  background-color: yellow;
+  width: 200px;
+  height: 700px;
 }
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px;
+}
+.button {
+  border: 2px solid red;
+  margin: 0px 10px;
+
 }
 </style>

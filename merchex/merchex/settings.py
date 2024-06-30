@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'blog',
     'corsheaders',
     'rest_framework',
+    'debug_toolbar',
 
     # pour spotify
     # 'allauth',
@@ -75,6 +76,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
 
 ]
 CORS_ALLOWED_ORIGINS = [
@@ -93,6 +96,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # New setting to tell Django where to find static files
 STATICFILES_DIRS = [
     BASE_DIR / "frontend" / "dist" / "static",
+]
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
 ]
 
 

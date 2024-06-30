@@ -8,10 +8,7 @@
       <p class="content">{{ post.language }}</p>
       <p class="content">{{ post.category }}</p>
     </div>
-    <div class="heart">
-      <p class="content">{{ post.like }}</p>
-      <p class="content">{{ post.dislike }}</p>
-    </div>
+
   </div>
 </template>
 

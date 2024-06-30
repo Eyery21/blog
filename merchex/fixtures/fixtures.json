@@ -1,433 +1,233 @@
 [
   {
-    "model": "blog.post",
-    "pk": 20,
+    "model": "blog.notes",
+    "pk": 5,
     "fields": {
-      "title": "Publication numéro 20",
-      "content": "Contenu de la vingtième publication.",
-      "images": "blog/images/image20.jpg",
-      "created_at": "2023-06-04T12:00:00Z",
-      "like": 5,
-      "dislike": 1,
-      "language": "JAVA"
+      "title": "banque",
+      "content": "rappeler banque",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 21,
+    "model": "blog.notes",
+    "id": 6,
     "fields": {
-      "title": "Publication numéro 21",
-      "content": "Contenu de la vingt-et-unième publication.",
-      "images": "blog/images/image21.jpg",
-      "created_at": "2023-06-05T12:00:00Z",
-      "like": 3,
-      "dislike": 0,
-      "language": "PHP"
+      "title": "vacances",
+      "content": "Planifier les vacances d'été",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 22,
+    "model": "blog.notes",
+    "id": 7,
     "fields": {
-      "title": "Publication numéro 22",
-      "content": "Contenu de la vingt-deuxième publication.",
-      "images": "blog/images/image22.jpg",
-      "created_at": "2023-06-06T12:00:00Z",
-      "like": 6,
-      "dislike": 2,
-      "language": "JS"
+      "title": "lecture",
+      "content": "Acheter les nouveaux livres de la rentrée",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 23,
+    "model": "blog.notes",
+    "id": 8,
     "fields": {
-      "title": "Publication numéro 23",
-      "content": "Contenu de la vingt-troisième publication.",
-      "images": "blog/images/image23.jpg",
-      "created_at": "2023-06-07T12:00:00Z",
-      "like": 8,
-      "dislike": 3,
-      "language": "PYTHON"
+      "title": "réunion",
+      "content": "Préparer la réunion de projet",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 24,
+    "model": "blog.notes",
+    "id": 9,
     "fields": {
-      "title": "Publication numéro 24",
-      "content": "Contenu de la vingt-quatrième publication.",
-      "images": "blog/images/image24.jpg",
-      "created_at": "2023-06-08T12:00:00Z",
-      "like": 4,
-      "dislike": 1,
-      "language": "HTML"
+      "title": "sport",
+      "content": "S'inscrire au club de tennis",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 25,
+    "model": "blog.notes",
+    "id": 10,
     "fields": {
-      "title": "Publication numéro 25",
-      "content": "Contenu de la vingt-cinquième publication.",
-      "images": "blog/images/image25.jpg",
-      "created_at": "2023-06-09T12:00:00Z",
-      "like": 10,
-      "dislike": 0,
-      "language": "CSS"
+      "title": "anniversaire",
+      "content": "Organiser la fête d'anniversaire de Julie",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 26,
+    "model": "blog.notes",
+    "id": 11,
     "fields": {
-      "title": "Publication numéro 26",
-      "content": "Contenu de la vingt-sixième publication.",
-      "images": "blog/images/image26.jpg",
-      "created_at": "2023-06-10T12:00:00Z",
-      "like": 7,
-      "dislike": 2,
-      "language": "JAVA"
+      "title": "courses",
+      "content": "Faire la liste des courses pour le week-end",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 27,
+    "model": "blog.notes",
+    "id": 12,
     "fields": {
-      "title": "Publication numéro 27",
-      "content": "Contenu de la vingt-septième publication.",
-      "images": "blog/images/image27.jpg",
-      "created_at": "2023-06-11T12:00:00Z",
-      "like": 9,
-      "dislike": 4,
-      "language": "PHP"
+      "title": "déjeuner",
+      "content": "Réserver une table pour le déjeuner d'affaires",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 28,
+    "model": "blog.notes",
+    "id": 13,
     "fields": {
-      "title": "Publication numéro 28",
-      "content": "Contenu de la vingt-huitième publication.",
-      "images": "blog/images/image28.jpg",
-      "created_at": "2023-06-12T12:00:00Z",
-      "like": 2,
-      "dislike": 1,
-      "language": "JS"
+      "title": "médecin",
+      "content": "Prendre rendez-vous chez le médecin",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 29,
+    "model": "blog.notes",
+    "id": 14,
     "fields": {
-      "title": "Publication numéro 29",
-      "content": "Contenu de la vingt-neuvième publication.",
-      "images": "blog/images/image29.jpg",
-      "created_at": "2023-06-13T12:00:00Z",
-      "like": 6,
-      "dislike": 3,
-      "language": "PYTHON"
+      "title": "vacances de printemps",
+      "content": "Planifier les vacances de printemps",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 30,
+    "model": "blog.notes",
+    "id": 15,
     "fields": {
-      "title": "Publication numéro 30",
-      "content": "Contenu de la trentième publication.",
-      "images": "blog/images/image30.jpg",
-      "created_at": "2023-06-14T12:00:00Z",
-      "like": 8,
-      "dislike": 0,
-      "language": "HTML"
+      "title": "jardinage",
+      "content": "Acheter des plantes pour le jardin",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 31,
+    "model": "blog.notes",
+    "id": 16,
     "fields": {
-      "title": "Publication numéro 31",
-      "content": "Contenu de la trente-et-unième publication.",
-      "images": "blog/images/image31.jpg",
-      "created_at": "2023-06-15T12:00:00Z",
-      "like": 3,
-      "dislike": 1,
-      "language": "CSS"
+      "title": "film",
+      "content": "Regarder le nouveau film de science-fiction",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 32,
+    "model": "blog.notes",
+    "id": 17,
     "fields": {
-      "title": "Publication numéro 32",
-      "content": "Contenu de la trente-deuxième publication.",
-      "images": "blog/images/image32.jpg",
-      "created_at": "2023-06-16T12:00:00Z",
-      "like": 5,
-      "dislike": 2,
-      "language": "JAVA"
+      "title": "cuisine",
+      "content": "Essayer une nouvelle recette de cuisine",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 33,
+    "model": "blog.notes",
+    "id": 18,
     "fields": {
-      "title": "Publication numéro 33",
-      "content": "Contenu de la trente-troisième publication.",
-      "images": "blog/images/image33.jpg",
-      "created_at": "2023-06-17T12:00:00Z",
-      "like": 4,
-      "dislike": 1,
-      "language": "PHP"
+      "title": "musique",
+      "content": "Assister à un concert de musique classique",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 34,
+    "model": "blog.notes",
+    "id": 19,
     "fields": {
-      "title": "Publication numéro 34",
-      "content": "Contenu de la trente-quatrième publication.",
-      "images": "blog/images/image34.jpg",
-      "created_at": "2023-06-18T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "JS"
+      "title": "cours en ligne",
+      "content": "S'inscrire à un cours en ligne de programmation",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 35,
+    "model": "blog.notes",
+    "id": 20,
     "fields": {
-      "title": "Publication numéro 35",
-      "content": "Contenu de la trente-cinquième publication.",
-      "images": "blog/images/image35.jpg",
-      "created_at": "2023-06-19T12:00:00Z",
-      "like": 9,
-      "dislike": 2,
-      "language": "PYTHON"
+      "title": "déplacement",
+      "content": "Organiser le déplacement professionnel à Paris",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 36,
+    "model": "blog.notes",
+    "id": 21,
     "fields": {
-      "title": "Publication numéro 36",
-      "content": "Contenu de la trente-sixième publication.",
-      "images": "blog/images/image36.jpg",
-      "created_at": "2023-06-20T12:00:00Z",
-      "like": 8,
-      "dislike": 1,
-      "language": "HTML"
+      "title": "déménagement",
+      "content": "Préparer le déménagement",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 37,
+    "model": "blog.notes",
+    "id": 22,
     "fields": {
-      "title": "Publication numéro 37",
-      "content": "Contenu de la trente-septième publication.",
-      "images": "blog/images/image37.jpg",
-      "created_at": "2023-06-21T12:00:00Z",
-      "like": 6,
-      "dislike": 0,
-      "language": "CSS"
+      "title": "fête",
+      "content": "Organiser une fête de quartier",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 38,
+    "model": "blog.notes",
+    "id": 23,
     "fields": {
-      "title": "Publication numéro 38",
-      "content": "Contenu de la trente-huitième publication.",
-      "images": "blog/images/image38.jpg",
-      "created_at": "2023-06-22T12:00:00Z",
-      "like": 5,
-      "dislike": 1,
-      "language": "JAVA"
-    }
-  },
-
-
-  {
-    "model": "blog.post",
-    "pk": 39,
-    "fields": {
-      "title": "Publication numéro 39",
-      "content": "Contenu de la trente-neuvième publication.",
-      "images": "blog/images/image39.jpg",
-      "created_at": "2023-06-23T12:00:00Z",
-      "like": 4,
-      "dislike": 1,
-      "language": "PHP"
+      "title": "lecture",
+      "content": "Lire le dernier livre de J.K. Rowling",
+      "public": true,
+      "private": false,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 40,
+    "model": "blog.notes",
+    "id": 24,
     "fields": {
-      "title": "Publication numéro 40",
-      "content": "Contenu de la quarantième publication.",
-      "images": "blog/images/image40.jpg",
-      "created_at": "2023-06-24T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "JS"
+      "title": "cours de langue",
+      "content": "Prendre des cours de langue en ligne",
+      "public": false,
+      "private": true,
+      "category": null
     }
   },
   {
-    "model": "blog.post",
-    "pk": 41,
+    "model": "blog.notes",
+    "id": 25,
     "fields": {
-      "title": "Publication numéro 41",
-      "content": "Contenu de la quarante-et-unième publication.",
-      "images": "blog/images/image41.jpg",
-      "created_at": "2023-06-25T12:00:00Z",
-      "like": 9,
-      "dislike": 2,
-      "language": "PYTHON"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 42,
-    "fields": {
-      "title": "Publication numéro 42",
-      "content": "Contenu de la quarante-deuxième publication.",
-      "images": "blog/images/image42.jpg",
-      "created_at": "2023-06-26T12:00:00Z",
-      "like": 8,
-      "dislike": 1,
-      "language": "HTML"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 43,
-    "fields": {
-      "title": "Publication numéro 43",
-      "content": "Contenu de la quarante-troisième publication.",
-      "images": "blog/images/image43.jpg",
-      "created_at": "2023-06-27T12:00:00Z",
-      "like": 6,
-      "dislike": 0,
-      "language": "CSS"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 44,
-    "fields": {
-      "title": "Publication numéro 44",
-      "content": "Contenu de la quarante-quatrième publication.",
-      "images": "blog/images/image44.jpg",
-      "created_at": "2023-06-28T12:00:00Z",
-      "like": 5,
-      "dislike": 1,
-      "language": "JAVA"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 45,
-    "fields": {
-      "title": "Publication numéro 45",
-      "content": "Contenu de la quarante-cinquième publication.",
-      "images": "blog/images/image45.jpg",
-      "created_at": "2023-06-29T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "PHP"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 46,
-    "fields": {
-      "title": "Publication numéro 46",
-      "content": "Contenu de la quarante-sixième publication.",
-      "images": "blog/images/image46.jpg",
-      "created_at": "2023-06-30T12:00:00Z",
-      "like": 3,
-      "dislike": 2,
-      "language": "JS"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 47,
-    "fields": {
-      "title": "Publication numéro 47",
-      "content": "Contenu de la quarante-septième publication.",
-      "images": "blog/images/image47.jpg",
-      "created_at": "2023-07-01T12:00:00Z",
-      "like": 8,
-      "dislike": 1,
-      "language": "PYTHON"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 48,
-    "fields": {
-      "title": "Publication numéro 48",
-      "content": "Contenu de la quarante-huitième publication.",
-      "images": "blog/images/image48.jpg",
-      "created_at": "2023-07-02T12:00:00Z",
-      "like": 6,
-      "dislike": 0,
-      "language": "HTML"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 49,
-    "fields": {
-      "title": "Publication numéro 49",
-      "content": "Contenu de la quarante-neuvième publication.",
-      "images": "blog/images/image49.jpg",
-      "created_at": "2023-07-03T12:00:00Z",
-      "like": 9,
-      "dislike": 2,
-      "language": "CSS"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 50,
-    "fields": {
-      "title": "Publication numéro 50",
-      "content": "Contenu de la cinquantième publication.",
-      "images": "blog/images/image50.jpg",
-      "created_at": "2023-07-04T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "JAVA"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 50,
-    "fields": {
-      "title": "Publication numéro 50",
-      "content": "Contenu de la cinquantième publication.",
-      "images": "blog/images/image50.jpg",
-      "created_at": "2023-07-04T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "JAVA"
-    }
-  },
-  {
-    "model": "blog.post",
-    "pk": 50,
-    "fields": {
-      "title": "Publication numéro 50",
-      "content": "Contenu de la cinquantième publication.",
-      "images": "blog/images/image50.jpg",
-      "created_at": "2023-07-04T12:00:00Z",
-      "like": 7,
-      "dislike": 0,
-      "language": "JAVA"
+      "title": "voyage",
+      "content": "Planifier un voyage en Europe",
+      "public": true,
+      "private": false,
+      "category": null
     }
   }
 ]

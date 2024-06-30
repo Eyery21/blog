@@ -21,16 +21,17 @@ from django.conf import settings
 from .spotify import get_spotify_token, get_spotify_playlist
 
 
-class BlogList(APIView):
+class BlogPost(APIView):
     def get(self, request, format=None):
         search_query = request.GET.get('search', None)
-        
+
         if search_query:
             posts = Post.objects.filter(
                 Q(title__icontains=search_query) |
                 Q(content__icontains=search_query) |
-                Q(images__icontains=search_query) |
-                Q(language__icontains=search_query)
+                Q(language__icontains=search_query) |
+                Q(category__name__icontains=search_query)
+
             )
         else:
             posts = Post.objects.all().order_by('id')  # Assurez-vous d'avoir order_by ici
@@ -39,13 +40,36 @@ class BlogList(APIView):
         page_number = request.GET.get('page', 1)
         page_obj = paginator.get_page(page_number)
         serializer = PostSerializer(page_obj, many=True)
-        
+
         return Response({
             'posts': serializer.data,
             'num_pages': paginator.num_pages,
             'current_page': page_obj.number
         })
 
+
+class BlogNotes(APIView):
+    def get(self, request, format=None):
+        search_query = request.GET.get('search', None)
+
+        if search_query:
+            notes = Notes.objects.filter(
+                Q(title__icontains=search_query) |
+                Q(content__icontains=search_query)
+            )
+        else:
+            notes = Notes.objects.all().order_by('id')
+
+        paginator = Paginator(notes, 6)  # 4 notes par page
+        page_number = request.GET.get('page', 1)
+        page_obj = paginator.get_page(page_number)
+        serializer = NotesSerializer(page_obj, many=True)
+
+        return Response({
+            'notes': serializer.data,
+            'num_pages': paginator.num_pages,
+            'current_page': page_obj.number
+        })
 
 def vue_index(request):
     return render(request, "app.html")
@@ -61,12 +85,6 @@ class BlogProject(APIView):
         serializer = ProjectSerializer(projects, many=True)
         return Response(serializer.data)
 
-
-class BlogNotes(APIView):
-    def get(self, request, format=None):
-        notes = Notes.objects.all()
-        serializer = NotesSerializer(notes, many=True)
-        return Response(serializer.data)
 
 
 def Blog_How(request):
