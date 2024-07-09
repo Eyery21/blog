@@ -44,9 +44,7 @@
               <div class="profile">
                 <aside>
                   <h1>guillaume vaury</h1>
-                  <h2>developpeur web</h2>
                 </aside>
-                <h3>Profil Professionnel</h3>
                 <p>
                   Futur étudiant en Pré-Msc à Epitech en septembre 2024, en
                   recherche d'une alternance
@@ -54,7 +52,7 @@
               </div>
               <div class="education">
                 <h2>Certificats, Formations</h2>
-                <p>Développeur Web et Mobile (2022)</p>
+                <p>Développeur Web et Mobile (2022), OpenClassrooms</p>
               </div>
 
               <div class="projects">
@@ -97,22 +95,23 @@
         <div class="verso">
           <div class="containercv">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio aliquid sint quae repellendus ex. Suscipit, neque?
-              Cupiditate dolorum, laboriosam non tenetur excepturi ex!
-              Voluptatum exercitationem architecto aperiam quas quisquam omnis.
+             Bonjour, vous lisez actuellement ma lettre de motivation, je ne suis pas favorable des lettres toutes faites, j'ai même une ldm toute prête pour troller ceux qui en exigent une, car pour moi, postuler c'est être motiver.
+
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio aliquid sint quae repellendus ex. Suscipit, neque?
-              Cupiditate dolorum, laboriosam non tenetur excepturi ex!
-              Voluptatum exercitationem architecto aperiam quas quisquam omnis.
+              Pour vous parler un peu de moi, j'ai découvert le code informatique il y a 2 ans, et depuis j'ai développer une pation devorante pour cet univers fait de 0 et de 1.
+
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio aliquid sint quae repellendus ex. Suscipit, neque?
-              Cupiditate dolorum, laboriosam non tenetur excepturi ex!
-              Voluptatum exercitationem architecto aperiam quas quisquam omnis.
+              Actuellement je fait des projets perso puisque je travail, mais à la rentrée 2024, j'entamerait une pre-MSCavec Epitech pour ensuite éssayer d'entamer une alternance visant un master de 7 au RNCP
+
+            </p>
+            <p>
+              j'ai comencer par l'html/css, puis mon crane a exploser quans j'ai découvert la programation avec javascript, et s'est amadoué avec vue/nodes, et je me suis intéresser à php, puis à python que j'apprécie particulièrement.
+
+            </p>
+            <p>
+              Si mon profil vous a intéresser, n'hésitez pas à me contacter et nous pourrons explorer le futur ensemble !
             </p>
           </div>
         </div>
@@ -135,8 +134,8 @@ export default {
         margin: 0,
         filename: "CV.pdf",
         image: { type: "jpeg", quality: 1.0 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: "px", format: [595, 842], orientation: "portrait" }, // format A4 en pixels
+        html2canvas: { scale: 5 },
+        jsPDF: { unit: "px", format: [794, 1123], orientation: "portrait" }, // format A4 en pixels
       };
       html2pdf().set(opt).from(element).save();
     },
@@ -148,17 +147,15 @@ export default {
 </script>
 
 <style>
-  .containercv {
-    background-color: rgb(165, 165, 173);
-    width: 595px; /* largeur d'une page A4 */
-  height: 842px; /* hauteur d'une page A4 */
-        margin-left: auto;
-    margin-right: auto;
-  }
+.containercv {
+  width: 794px; /* Largeur A4 en pixels */
+  height: 1123px; /* Hauteur A4 en pixels */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
 
- 
-  
-  
+}
+
 .flip-box-inner {
   position: relative;
   transform-style: preserve-3d;
@@ -169,9 +166,9 @@ export default {
   transform: rotateY(180deg);
 }
 .recto {
-  width: 595px;
+  width: 794px; /* Largeur A4 en pixels */
+  height: 1123px; /* Hauteur A4 en pixels */
   background-color: blue;
-  width: 100%;
 }
 .recto,
 .verso {
@@ -189,14 +186,35 @@ export default {
   box-sizing: border-box;
 }
 .main-content {
-  background-color: yellow;
+  background-color: rgb(250, 250, 158);
+  display: flex;
+  gap: 2%;
 }
 .sidebar {
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+  max-height: 1123px;
+  padding: 0 1%;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+h3,
+h2 {
+  color: rgb(15, 14, 14);
+  background-color: rgb(122, 180, 180);
+  border-radius: 140px;
+  border: 4%;
+}
+h3, h2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  padding: 1% 5%;
 }
 .windows {
   display: flex;
-  background-color: #941717;
   justify-content: center; /* Centrage horizontal */
   width: 100%;
   height: 100%;
@@ -216,7 +234,6 @@ export default {
   bottom: 25%;
   margin-left: 50%;
   margin-right: 50%;
-  color: red;
 }
 .projet {
   display: flex;
@@ -227,7 +244,6 @@ export default {
 .contact-info {
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
 }
 .contact-info > img {
   width: 90%;
@@ -236,40 +252,52 @@ export default {
 }
 
 .skills {
-  margin: 1%;
-  border: 1px solid white;
   margin: 5% 0%;
+  
   height: auto;
+
 }
 .skills > h3 {
-  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 .skills > ul {
-  margin-top: 10px;
-  background-color: #941717;
-  align-items: end;
+  margin-top: 15%;
+  
+  display: flex;
+  flex-direction: column;
 }
 .skills > ul > li {
+  margin: 2% 0%;
+  text-align : left;
+
   list-style-type: none;
-  font-size: small;
+
+
 }
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  padding: 1%;
 }
 .profile,
-.experience,
+.education,
 .projects {
   border-bottom: 2px solid black;
+}
+.profile,
+.education,
+.projects,
+.experience {
+
+  padding: 8% 0%;
 }
 .profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30%;
-  background-color: red;
 }
 .profile > aside {
   display: flex;
@@ -291,23 +319,19 @@ export default {
 }
 
 .experience {
-  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  margin: 2% 0%;
 }
 
-.experience > h2 {
-  /* font-size: 50%; */
-}
-.experience > h2,
+.experience > 
 p {
-  margin: 10px 0 10px 0;
+  margin: 20px 0 10px 0;
 }
 
 .projects {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -315,6 +339,8 @@ p {
 }
 /* .projects > h2 {
 } */
+ .projects > ul {
+ }
 .projects > ul > li > ul > p {
   padding-left: 5px;
   color: red;
@@ -323,15 +349,18 @@ p {
   align-items: start;
 }
 .projects > ul > li {
-  border: 1px solid black;
+  display: flex;
+  list-style-type: none;
+
 }
 .projects > ul > li > ul {
+  margin: 5% 0%;
+
   display: flex;
   flex-direction: column;
   align-items: start;
-  background-color: aliceblue;
   list-style-type: none;
-  font-size: 90%;
+  font-size: 17px;
 }
 .projects > ul {
   width: 100%;
@@ -347,5 +376,23 @@ p {
 }
 .buttonPDF {
   border: 10px solid black;
+}
+
+@media print {
+  .containercv {
+    border: none;
+  }
+
+  .sidebar,
+  .main-content {
+    border: none;
+  }
+
+  .profile,
+  .education,
+  .projects,
+  .experience {
+    border-bottom: none;
+  }
 }
 </style>
