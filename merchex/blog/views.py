@@ -1,6 +1,9 @@
+
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.db.models import Q
+from rest_framework.permissions import IsAuthenticated
+from django.http import Http404
 
 from .models import Post
 from .models import Project
