@@ -8,7 +8,7 @@
           <div id="cv" class="containercv">
             <div class="sidebar">
               <div class="contact-info">
-                <img src="@/assets/CV.png" alt="CV" />
+                <img src="@/assets/photo.jpg" alt="CV" />
                 <p>Chagny</p>
                 <p>0627237610</p>
                 <p>guillaury.gv40@gmail.com</p>
@@ -193,7 +193,7 @@ export default {
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  gap: 2%;
   max-height: 1123px;
   padding: 0 1%;
   border-left: 1px solid black;
@@ -246,8 +246,9 @@ h3, h2 {
   flex-direction: column;
 }
 .contact-info > img {
-  width: 90%;
-  height: 200px;
+  max-width : 250px;
+  height : 350px;
+
   color: aliceblue;
 }
 
@@ -377,7 +378,19 @@ p {
 .buttonPDF {
   border: 10px solid black;
 }
+.verso > .containercv {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  font-size: 5em !important;
+  
+}
+.verso > .containercv > p::first-letter{
 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
 @media print {
   .containercv {
     border: none;

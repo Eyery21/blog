@@ -74,8 +74,8 @@ class BlogNotes(APIView):
             'current_page': page_obj.number
         })
 
-def vue_index(request):
-    return render(request, "app.html")
+# def vue_index(request):
+#     return render(request, "app.html")
 
 
 def Blog_Profil(request):
@@ -97,3 +97,20 @@ def Blog_How(request):
 
 def Blog_Lab(request):
     return render(request, 'posts/labo.html')
+
+
+# class BlogIndex(APIView):
+#     def get(self, request, format=None):
+#         latest_posts = Post.objects.all().order_by('-created_at')[:5]
+#         latest_notes = Notes.objects.all().order_by('-created_at')[:5]
+#         latest_projects = Project.objects.all().order_by('-created_at')[:5]
+
+#         posts_serializer = PostSerializer(latest_posts, many=True)
+#         notes_serializer = NotesSerializer(latest_notes, many=True)
+#         projects_serializer = ProjectSerializer(latest_projects, many=True)
+
+#         return Response({
+#             'latest_posts': posts_serializer.data,
+#             'latest_notes': notes_serializer.data,
+#             'latest_projects': projects_serializer.data,
+#         })

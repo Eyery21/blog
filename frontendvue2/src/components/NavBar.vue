@@ -6,6 +6,7 @@
     <router-link to="/posts">posts</router-link> |
     <router-link to="/notes">notes</router-link> |
     <router-link to="">templates</router-link> |
+    <router-link to="">cv</router-link> |
   </nav>
 </template>
 
